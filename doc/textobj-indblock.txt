@@ -1,0 +1,85 @@
+*textobj-indblock.txt*	Text objects for blocks of indentation whitespace
+
+Author: glts <676c7473@gmail.com>
+License: Same terms as Vim itself (see |license|)
+
+==============================================================================
+DESCRIPTION					*textobj-indblock*
+
+This plugin provides text objects to select a block of indentation whitespace
+based on the indentation of the current line.
+
+Given a source fragment like the following, with the cursor resting on "200",
+|<Plug>(textobj-indblock-a)| will select the Visual block indicated with the
+middots. >
+
+    foreach my $q (@$questions) {
+	if ($q->answered()) {
+    ········my $upvotes = 0;
+    ········foreach (@{ $q->answers() }) { $upvotes += $_->upvotes() }
+    ········
+    ········push @good_answers, $q if $upvotes > 200;
+	}
+    }
+
+The text objects in this plugin closely follow the precedent set by the
+|textobj-indent| plugin by Kana Natsuno:
+
+http://github.com/kana/vim-textobj-indent
+
+See the documentation there to learn more.
+
+This plugin depends on the |textobj-user| plugin (Vim script ID 2100).
+
+==============================================================================
+INTERFACE					*textobj-indblock-interface*
+
+What follows is the mapping interface for Visual and Operator-pending mode.
+
+<Plug>(textobj-indblock-a)			*<Plug>(textobj-indblock-a)*
+			Selects a (Visual) block of indentation whitespace.
+			Includes lines with the same or greater amount of
+			indentation, and empty lines.
+
+			When the current line is not indented or is empty, the
+			next line that does have indentation will be used.
+
+			Note that Vim cannot by default select only part of a
+			tab or select past the end of the line.  Thus, in
+			certain situations the Visual block will be skewed or
+			reduced.  You can work around this by setting
+			'virtualedit' to "all".
+
+<Plug>(textobj-indblock-i)	 		*<Plug>(textobj-indblock-i)*
+			Same as |<Plug>(textobj-indblock-a)|, but doesn't
+			include unindented or empty lines.
+
+<Plug>(textobj-indblock-same-a)		     *<Plug>(textobj-indblock-same-a)*
+<Plug>(textobj-indblock-same-i)		     *<Plug>(textobj-indblock-same-i)*
+			Same as |<Plug>(textobj-indblock-a)| and
+			|<Plug>(textobj-indblock-a)|, but selects only blocks
+			with the exact same amount of indentation.
+
+The following are the default mappings.  Hint: "o" is right next to "i" (for
+"indent").
+
+	{lhs}	{rhs}			~
+	-----	----------------------	~
+	ao	<Plug>(textobj-indblock-a)
+	io	<Plug>(textobj-indblock-i)
+	aO	<Plug>(textobj-indblock-same-a)
+	iO	<Plug>(textobj-indblock-same-i)
+
+				  *g:textobj_indblock_no_default_key_mappings*
+					  *:TextobjIndblockDefaultKeyMappings*
+This plugin defines Visual and Operator-pending mode mappings in the usual
+fashion.  See the |textobj-user| documentation for more info.
+
+==============================================================================
+CHANGELOG					*textobj-indblock-changelog*
+
+1.0.0	2012-12-08
+	Initial release.
+
+==============================================================================
+ vim:tw=78:ts=8:ft=help:norl:
