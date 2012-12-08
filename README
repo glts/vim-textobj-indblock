@@ -1,0 +1,27 @@
+textobj-indblock
+----------------
+
+This plugin provides text objects to act on a block of indentation whitespace
+based on the indentation of the current line.
+
+This plugin supplements, and in this respect closely follows the example of
+Kana Natsuno's textobj-indent plugin:
+
+https://github.com/kana/vim-textobj-indent
+
+In general, that plugin is more useful but in some occasions it can be
+preferable to act on indentation whitespace directly.
+
+Installation
+------------
+
+Move the files into their respective directories inside your ~/.vim directory
+(or your $HOME\vimfiles directory if you're on Windows).
+
+With a plugin manager such as pathogen the installation is as simple as:
+
+cd ~/.vim/bundle
+git clone git://github.com/glts/vim-textobj-indblock.git textobj-indblock
+
+Finally, don't forget to run ":helptags" or equivalent on your doc directory
+to register the help file.
