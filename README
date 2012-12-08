@@ -9,7 +9,7 @@ Kana Natsuno's textobj-indent plugin:
 
 https://github.com/kana/vim-textobj-indent
 
-In general, that plugin is more useful but in some occasions it can be
+In general, that plugin is more useful but on some occasions it can be
 preferable to act on indentation whitespace directly.
 
 Installation
