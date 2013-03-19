@@ -57,7 +57,7 @@ What follows is the mapping interface for Visual and Operator-pending mode.
 <Plug>(textobj-indblock-same-a)		     *<Plug>(textobj-indblock-same-a)*
 <Plug>(textobj-indblock-same-i)		     *<Plug>(textobj-indblock-same-i)*
 			Same as |<Plug>(textobj-indblock-a)| and
-			|<Plug>(textobj-indblock-a)|, but selects only blocks
+			|<Plug>(textobj-indblock-i)|, but selects only blocks
 			with the exact same amount of indentation.
 
 The following are the default mappings.  Hint: "o" is right next to "i" (for
