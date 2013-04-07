@@ -1,8 +1,8 @@
 textobj-indblock
 ----------------
 
-This plugin provides text objects to act on a block of indentation whitespace
-based on the indentation of the current line.
+This Vim plugin provides text objects to act on a block of indentation
+whitespace based on the indentation of the current line.
 
 This plugin supplements, and in this respect closely follows the example of
 Kana Natsuno's textobj-indent plugin:
