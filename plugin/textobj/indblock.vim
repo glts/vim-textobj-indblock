@@ -1,6 +1,6 @@
 " textobj-indblock - Text objects for blocks of indentation whitespace
 " Author: glts <676c7473@gmail.com>
-" Date:   2013-02-01
+" Date: 2013-04-07
 " GetLatestVimScripts: 4348 1 :AutoInstall: textobj-indblock
 
 if exists('g:loaded_textobj_indblock')
@@ -8,14 +8,18 @@ if exists('g:loaded_textobj_indblock')
 endif
 
 call textobj#user#plugin('indblock', {
-   \   '-': {
-   \     'select-a': 'ao', '*select-a-function*': 'textobj#indblock#select_a',
-   \     'select-i': 'io', '*select-i-function*': 'textobj#indblock#select_i',
-   \   },
-   \   'same': {
-   \     'select-a': 'aO', '*select-a-function*': 'textobj#indblock#select_same_a',
-   \     'select-i': 'iO', '*select-i-function*': 'textobj#indblock#select_same_i',
-   \   }
-   \ })
+     \   '-': {
+     \     'select-a-function': 'textobj#indblock#select_a',
+     \     'select-a': 'ao',
+     \     'select-i-function': 'textobj#indblock#select_i',
+     \     'select-i': 'io',
+     \   },
+     \   'same': {
+     \     'select-a-function': 'textobj#indblock#select_same_a',
+     \     'select-a': 'aO',
+     \     'select-i-function': 'textobj#indblock#select_same_i',
+     \     'select-i': 'iO',
+     \   }
+     \ })
 
 let g:loaded_textobj_indblock = 1
