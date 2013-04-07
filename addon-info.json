@@ -1,0 +1,13 @@
+{
+    "name": "textobj-indblock",
+    "description": "Text objects for blocks of indentation whitespace",
+    "author": "glts <676c7473@gmail.com>",
+    "version": "1.0.1",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/glts/vim-textobj-indblock.git"
+    },
+    "dependencies": {
+        "textobj-user": {}
+    }
+}
