@@ -48,7 +48,7 @@ What follows is the mapping interface for Visual and Operator-pending mode.
 			tab or select past the end of the line.  Thus, in
 			certain situations the Visual block will be skewed or
 			reduced.  You can work around this by setting
-			'virtualedit' to "all".
+			'virtualedit' to "block" or "all".
 
 <Plug>(textobj-indblock-i)	 		*<Plug>(textobj-indblock-i)*
 			Same as |<Plug>(textobj-indblock-a)|, but doesn't
