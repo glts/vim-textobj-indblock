@@ -18,10 +18,13 @@ Installation
 Move the files into their respective directories inside your ~/.vim directory
 (or your $HOME\vimfiles directory if you're on Windows).
 
-With a plugin manager such as pathogen the installation is as simple as:
+With the Pathogen plugin manager the installation is as simple as:
 
 cd ~/.vim/bundle
 git clone git://github.com/glts/vim-textobj-indblock.git textobj-indblock
+
+But this plugin also plays well with the built-in Getscript and other plugin
+managers such as Vundle, vim-addon-manager, and vim-flavor.
 
 Finally, don't forget to run ":helptags" or equivalent on your doc directory
 to register the help file.
