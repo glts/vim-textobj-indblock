@@ -1,9 +1,6 @@
 " textobj-indblock - Text objects for blocks of indentation whitespace
-" Author:  glts <676c7473@gmail.com>
-" Date:    2012-12-08
-
-let s:save_cpo = &cpo
-set cpo&vim
+" Author: glts <676c7473@gmail.com>
+" Date: 2013-04-07
 
 function! s:Select(include_blank, same_indent)
 
@@ -103,6 +100,3 @@ endfunction
 function! textobj#indblock#select_same_i()
   return s:Select(0, 1)
 endfunction
-
-let &cpo = s:save_cpo
-unlet s:save_cpo
