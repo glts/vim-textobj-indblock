@@ -29,7 +29,7 @@ http://github.com/kana/vim-textobj-indent
 
 See the documentation there to learn more.
 
-This plugin depends on the |textobj-user| plugin (Vim script ID 2100).
+This plugin depends on the |textobj-user| plugin, v0.4.0 (Vim script ID 2100).
 
 ==============================================================================
 INTERFACE					*textobj-indblock-interface*
@@ -77,6 +77,11 @@ fashion.  See the |textobj-user| documentation for more info.
 
 ==============================================================================
 CHANGELOG					*textobj-indblock-changelog*
+
+1.1.0	2013-04-08
+	Updated to textobj-user 0.4.0.
+	Minor doc fixes.
+	Better support for different plugin managers.
 
 1.0.0	2012-12-08
 	Initial release.
