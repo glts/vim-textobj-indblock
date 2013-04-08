@@ -1,6 +1,7 @@
 " textobj-indblock - Text objects for blocks of indentation whitespace
 " Author: glts <676c7473@gmail.com>
 " Date: 2013-04-07
+" GetLatestVimScripts: 2100 1 textobj-user
 " GetLatestVimScripts: 4348 1 :AutoInstall: textobj-indblock
 
 if exists('g:loaded_textobj_indblock')
